@@ -97,7 +97,7 @@ int main (){
               else state = "horizontal";
 
            Image Flipped_Image = Flip_Filter(image, state);
-           string finalFileName = "flipped_" + fileName;
+           string finalFileName = "flipped_" + state + "_" + fileName;
            Flipped_Image.saveImage(finalFileName);
            break;
     }
@@ -108,7 +108,7 @@ int main (){
             cin>>rotated_angle;
 
             Image Rotated_Image = Rotate_image_filter(image, rotated_angle);
-            string finalFileName = "rotated_" + fileName;
+            string finalFileName = "rotated_" + to_string(rotated_angle) + "_" + fileName;
             Rotated_Image.saveImage(finalFileName);
             cout<<image.width<<'\n';
             cout<<image.height<<'\n';
